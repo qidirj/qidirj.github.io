@@ -16320,6 +16320,12 @@ a.btn-icon-only
 .card
 {
     position: relative;
+    opacity: 0.8;
+}
+
+.card :hover
+{
+    opacity: 0.92;
 }
 
 .profile-page .card-profile
