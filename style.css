@@ -20,7 +20,7 @@ html.themecolor-toodark.darkmode{
 
 body{
 	background: #f4f5f7 !important;
-	font-family: 'Open Sans', -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Helvetica, Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimSun, sans-serif;
+	font-family: 'Source Han Sans CN','Open Sans', -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Helvetica, Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimSun, sans-serif;
 }
 a{
 	transition: color .25s ease;
@@ -97,7 +97,7 @@ article .post-content a:hover:before{
 	transform: scaleX(1);
 }
 article pre:not(.hljs-codeblock){
-	font-family: Consolas,Menlo,Monaco,'Andale Mono WT','Andale Mono','Lucida Console','Lucida Sans Typewriter','DejaVu Sans Mono','Bitstream Vera Sans Mono','Liberation Mono','Nimbus Mono L','Courier New',Courier,monospace;
+	font-family: 'Ubuntu Mono',Consolas,Menlo,Monaco,'Andale Mono WT','Andale Mono','Lucida Console','Lucida Sans Typewriter','DejaVu Sans Mono','Bitstream Vera Sans Mono','Liberation Mono','Nimbus Mono L','Courier New',Courier,monospace;
 	font-size: 14px;
 	line-height: 1.375;
 	text-align: left;
@@ -130,7 +130,7 @@ article .post-content u , article .post-content ins{
 	border-bottom: 1px solid;
 }
 article code:not([hljs-codeblock-inner]){
-	font-family: Consolas,Menlo,Monaco,'Andale Mono WT','Andale Mono','Lucida Console','Lucida Sans Typewriter','DejaVu Sans Mono','Bitstream Vera Sans Mono','Liberation Mono','Nimbus Mono L','Courier New',Courier,monospace;
+	font-family: 'Ubuntu Mono',Consolas,Menlo,Monaco,'Andale Mono WT','Andale Mono','Lucida Console','Lucida Sans Typewriter','DejaVu Sans Mono','Bitstream Vera Sans Mono','Liberation Mono','Nimbus Mono L','Courier New',Courier,monospace;
 	color: #f5365c;
 	background: ##eff1f5;
 	direction: ltr;
@@ -1862,7 +1862,7 @@ html.darkmode.amoled-dark .comment-item-text .comment-sticker:active{
 	opacity: .78;
 }
 .comment-item-text pre {
-	font-family: Consolas,Menlo,Monaco,'Andale Mono WT','Andale Mono','Lucida Console','Lucida Sans Typewriter','DejaVu Sans Mono','Bitstream Vera Sans Mono','Liberation Mono','Nimbus Mono L','Courier New',Courier,monospace;
+	font-family: 'Ubuntu Mono',Consolas,Menlo,Monaco,'Andale Mono WT','Andale Mono','Lucida Console','Lucida Sans Typewriter','DejaVu Sans Mono','Bitstream Vera Sans Mono','Liberation Mono','Nimbus Mono L','Courier New',Courier,monospace;
 	font-size: 14px;
 	line-height: 1.375;
 	text-align: left;
@@ -3592,7 +3592,7 @@ pre.hljs-codeblock .hljs-control i.fa{
 	pointer-events: none;
 	transition: all .2s ease;
 	font-size: 12px;
-	font-family: sans-serif;
+	font-family: 'Source Han Sans CN',sans-serif;
 }
 .hljs-control-btn:hover:before {
 	opacity: 1;
