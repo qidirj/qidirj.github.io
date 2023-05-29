@@ -16,7 +16,7 @@
 <meta property="og:description" content="关于日记的某年某月某日的不知道该叫什么和哪天进行的 B 层模拟赛于是把这些全都塞进标题的这档子事 | 题解A. 日记和绝世好课A1. 题意简述给定 $n, m, q, a_i, b_i, k_j, l_x, r_x(1\leq i\leq n, 1\leq j\leq m, 1\leq x\leq q)$，请对每个 $x$ 计算以下表达式的值： $$\sum\limits_{i&#x3D;1}^{">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-05-01T11:01:34.000Z">
-<meta property="article:modified_time" content="2023-05-01T11:01:54.513Z">
+<meta property="article:modified_time" content="2023-05-29T08:10:07.432Z">
 <meta property="article:author" content="Daiari Neko">
 <meta property="article:tag" content="题解">
 <meta name="twitter:card" content="summary">
@@ -522,7 +522,7 @@
 							<nav class="site-state">
 								<div class="site-state-item site-state-posts">
 									<a href="/archives">
-										<span class="site-state-item-count">8</span>
+										<span class="site-state-item-count">10</span>
 										<span class="site-state-item-name">文章</span>
 									</a>
 								</div>
@@ -655,7 +655,7 @@
 						
 						<div class="post-meta-detail post-meta-detail-time">
 							<i class="fa fa-clock-o" aria-hidden="true"></i>
-							<time title="发布于 2023-5-1 19:01:34 | 编辑于 2023-5-1 19:01:54">2023-5-1 19:01
+							<time title="发布于 2023-5-1 19:01:34 | 编辑于 2023-5-29 16:10:07">2023-5-1 19:01
 							</time>
 						</div>
 					
@@ -674,7 +674,7 @@
 						
 						<div class="post-meta-detail post-meta-detail-words">
 							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							2.5k 字
+							1.7k 字
 						</div>
 					
 						
@@ -682,7 +682,7 @@
 						
 						<div class="post-meta-detail post-meta-detail-readingtime">
 							<i class="fa fa-hourglass-end" aria-hidden="true"></i>
-							9 分钟
+							6 分钟
 						</div>
 					
 		</div>
@@ -723,24 +723,57 @@
 <p>$$<br>h_i &#x3D; \begin{cases}<br>0 &amp; i\in \mathrm{leaf}\<br>\dfrac{\sum\limits_{j\in \mathrm{subtree}_i}h_j}{\mathrm{size}_i-1} + 1 &amp; i\in \mathrm{leaf}\<br>\end{cases}<br>$$</p>
 <p>先用一样的套路求出每个转移的期望步数的平均值，此时要将其 $+1$ 才能得到期望步数（因为这次转移需要一步）。</p>
 <p>注意，这些转移里都需要求子树和，需要在维护 $f,g,h$ 的同时维护 $\sum f, \sum g, \sum h$。如果没有维护，复杂度会退化为 $O(n^2)$，只有 68 分。</p>
-<h3 id="D-日记和三分图"><a href="#D-日记和三分图" class="headerlink" title="D. 日记和三分图"></a>D. 日记和三分图</h3><h4 id="D1-题意简述"><a href="#D1-题意简述" class="headerlink" title="D1. 题意简述"></a>D1. 题意简述</h4><p>日记按直觉定义了三分图，然后规定了三分图中 $|A|,|B|,|C|$ 及 $A\rightarrow B$ 边的数量，并让你求出合法的只包含一条链的三分图个数。</p>
-<h4 id="D2-部分分-12"><a href="#D2-部分分-12" class="headerlink" title="D2. 部分分 - 12"></a>D2. 部分分 - 12</h4><p>枚举每个点的归属，再枚举链上点的顺序。直接枚举的话很难拿到 $n&#x3D;8$ 的分。</p>
-<h4 id="D3-部分分-20"><a href="#D3-部分分-20" class="headerlink" title="D3. 部分分 - 20"></a>D3. 部分分 - 20</h4><p>如果枚举每个点的归属时及时剪枝，可以拿到 $n&#x3D;8$ 的分。</p>
-<h4 id="D4-转化题意"><a href="#D4-转化题意" class="headerlink" title="D4. 转化题意"></a>D4. 转化题意</h4><p>题里的点带标号。为了更容易转化题意，能否让它不带标号？</p>
-<p>我们考虑先求出不带标号的方案数，再乘上合法的标号个数即为答案。</p>
-<p>通过题目给定条件，我们能够算出合法的标号个数有多少种吗？显然可以。因为有 $n$ 个点，$a$ 个点为 $A$ 类，所以方案数为 $P_n^a$。剩下 $(n-a)$ 个点，$b$ 个点为 $B$ 类，方案数为 $P_{n-a}^b$。最后 $c$ 个点均为 $C$ 类，方案数为 $P_c^c&#x3D;c!$。将这三个数乘起来得到 $P_n^aP_{n-a}^bP_c^c$ 即为合法个数。</p>
-<p>接下来，要求不带标号的方案数。</p>
-<p>先转化一下题意，原题是在图上操作，但要求图是条链。已经没有标号，而只有分类了，那么我们可以将一种分类抽象为一种字符，继而将链转化为字符串。[此处应该有图，但日记太菜了，不会画]</p>
-<p>那么，这个字符串是只包含 <code>ABC</code> 的字符串，规定了其中每种字符的个数，及子串 <code>AB</code> 的个数。</p>
-<h4 id="D5-部分分-24"><a href="#D5-部分分-24" class="headerlink" title="D5. 部分分 - 24"></a>D5. 部分分 - 24</h4><p>转化了题意之后，再枚举每个字符，就变成 $O(n3^n)$ 的了。它并不能跑到 $n&#x3D;15$。</p>
-<h4 id="D6-部分分-40"><a href="#D6-部分分-40" class="headerlink" title="D6. 部分分 - 40"></a>D6. 部分分 - 40</h4><p>如果枚举每个字符的时候也及时剪枝，就可以拿到 $n\leq 17$ 的分了。</p>
-<h4 id="D7-题解"><a href="#D7-题解" class="headerlink" title="D7. 题解"></a>D7. 题解</h4><p>先将不好算的 <code>AB</code> 单独拎出来，考虑将其定义为新字符 <code>E</code>。则题意进一步转化为：规定每种字符的个数，求只包含 <code>ABCE</code> 的、不含子串 <code>AB</code> 的字符串个数。</p>
-<p>第一步，我们将 <code>BCE</code> 排好。注意此时已经没有“标号”了。<code>B</code> 的排列种数为 $C_{(b-e)+c+e}^{b-e}$，<code>C</code> 为 $C_{c+e}^c$。<code>E</code> 只能占剩下的位置，种数为 $1$。总的方案数为 $C_{(b-e)+c+e}^{b-e}C_{c+e}^c$。</p>
-<p>下一步，我们插入 <code>A</code> 字符。此时，已经有 $(b-e)$ 个 <code>B</code>，而这些位置前面不能插入 <code>A</code>（来满足后一个限制），因此根据插板法，方案数为 $C_{(a-e)+c+e}^{a-e}$。</p>
-<hr>
-<p>把这一堆东西乘起来，得到答案为 $P_n^aP_{n-a}^bP_c^cC_{(b-e)+c+e}^{b-e}C_{c+e}^cC_{(a-e)+c+e}^{a-e}$。看起来很乱，但其实只需要算几个排列数和几个组合数。</p>
-<p>如果每次暴力计算是 $O(Tn)$ 的，难以承受。考虑模数是质数，可以预处理前 $O(n)$ 个自然数的阶乘和阶乘的逆元，来加快计算。这样，时间复杂度为 $O(n+T)$ 或 $O(n\log n + T)$，取决于实现。这是可以承受的了。$O(T)$ 部分常数较大（因为要计算 $6$ 次，每次计算都有多个乘法和取模），注意优化一下。</p>
-<p>中间的子任务是留给没有推出完整式子或者不会 $O(1)$ 组合数的选手的。</p>
+<h3 id="D-日记和三分图"><a href="#D-日记和三分图" class="headerlink" title="D. 日记和三分图"></a>D. 日记和三分图</h3><!-- #### D1. 题意简述
+
+日记按直觉定义了三分图，然后规定了三分图中 $|A|,|B|,|C|$ 及 $A\rightarrow B$ 边的数量，并让你求出合法的只包含一条链的三分图个数。
+
+#### D2. 部分分 - 12
+
+枚举每个点的归属，再枚举链上点的顺序。直接枚举的话很难拿到 $n=8$ 的分。
+
+#### D3. 部分分 - 20
+
+如果枚举每个点的归属时及时剪枝，可以拿到 $n=8$ 的分。
+
+#### D4. 转化题意
+
+题里的点带标号。为了更容易转化题意，能否让它不带标号？
+
+我们考虑先求出不带标号的方案数，再乘上合法的标号个数即为答案。
+
+通过题目给定条件，我们能够算出合法的标号个数有多少种吗？显然可以。因为有 $n$ 个点，$a$ 个点为 $A$ 类，所以方案数为 $P_n^a$。剩下 $(n-a)$ 个点，$b$ 个点为 $B$ 类，方案数为 $P_{n-a}^b$。最后 $c$ 个点均为 $C$ 类，方案数为 $P_c^c=c!$。将这三个数乘起来得到 $P_n^aP_{n-a}^bP_c^c$ 即为合法个数。
+
+接下来，要求不带标号的方案数。
+
+先转化一下题意，原题是在图上操作，但要求图是条链。已经没有标号，而只有分类了，那么我们可以将一种分类抽象为一种字符，继而将链转化为字符串。[此处应该有图，但日记太菜了，不会画]
+
+那么，这个字符串是只包含 `ABC` 的字符串，规定了其中每种字符的个数，及子串 `AB` 的个数。
+
+#### D5. 部分分 - 24
+
+转化了题意之后，再枚举每个字符，就变成 $O(n3^n)$ 的了。它并不能跑到 $n=15$。
+
+#### D6. 部分分 - 40
+
+如果枚举每个字符的时候也及时剪枝，就可以拿到 $n\leq 17$ 的分了。
+
+#### D7. 题解
+
+先将不好算的 `AB` 单独拎出来，考虑将其定义为新字符 `E`。则题意进一步转化为：规定每种字符的个数，求只包含 `ABCE` 的、不含子串 `AB` 的字符串个数。
+
+第一步，我们将 `BCE` 排好。注意此时已经没有“标号”了。`B` 的排列种数为 $C_{(b-e)+c+e}^{b-e}$，`C` 为 $C_{c+e}^c$。`E` 只能占剩下的位置，种数为 $1$。总的方案数为 $C_{(b-e)+c+e}^{b-e}C_{c+e}^c$。
+
+下一步，我们插入 `A` 字符。此时，已经有 $(b-e)$ 个 `B`，而这些位置前面不能插入 `A`（来满足后一个限制），因此根据插板法，方案数为 $C_{(a-e)+c+e}^{a-e}$。
+
+---
+
+把这一堆东西乘起来，得到答案为 $P_n^aP_{n-a}^bP_c^cC_{(b-e)+c+e}^{b-e}C_{c+e}^cC_{(a-e)+c+e}^{a-e}$。看起来很乱，但其实只需要算几个排列数和几个组合数。
+
+如果每次暴力计算是 $O(Tn)$ 的，难以承受。考虑模数是质数，可以预处理前 $O(n)$ 个自然数的阶乘和阶乘的逆元，来加快计算。这样，时间复杂度为 $O(n+T)$ 或 $O(n\log n + T)$，取决于实现。这是可以承受的了。$O(T)$ 部分常数较大（因为要计算 $6$ 次，每次计算都有多个乘法和取模），注意优化一下。
+
+中间的子任务是留给没有推出完整式子或者不会 $O(1)$ 组合数的选手的。 -->
+
+<p>众所周知，这道题假掉了，所以这里的题解注释了。如果你真的想看，可以 F12 取消注释。</p>
 <h3 id="E-日记和文化课"><a href="#E-日记和文化课" class="headerlink" title="E. 日记和文化课"></a>E. 日记和文化课</h3><h4 id="E1-题解"><a href="#E1-题解" class="headerlink" title="E1. 题解"></a>E1. 题解</h4><p>直接求。$\mathrm{ans} &#x3D; \sum\limits_{i&#x3D;1}^n a_ip_i$。</p>
 <h3 id="F-日记和完美构造"><a href="#F-日记和完美构造" class="headerlink" title="F. 日记和完美构造"></a>F. 日记和完美构造</h3><h4 id="F1-题解"><a href="#F1-题解" class="headerlink" title="F1. 题解"></a>F1. 题解</h4><p>抛开那些形式化定义，插入一个数字使得整个数为 9 的倍数。插入什么数字是可以确定的，插入位置可以贪心：从高往低，如果当前位置能减小字典序，则当前位置一定最优；否则放到末尾一定最优。</p>
 
@@ -882,7 +915,7 @@
 
 
 
-<div class="post-navigation card shadow-sm"><div class="post-navigation-item post-navigation-pre"></div><div class="post-navigation-item post-navigation-next"><span class="page-navigation-extra-text">下一篇 <i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i></span><a href="/2023/04/22/%E9%97%B2%E8%AF%9D-20230417-20230423/" rel="next"> 闲话 - 20230417~20230423</a></div></div>
+<div class="post-navigation card shadow-sm"><div class="post-navigation-item post-navigation-pre"><span class="page-navigation-extra-text"><i class="fa fa-arrow-circle-o-left" aria-hidden="true"></i>上一篇</span><a href="/2023/05/29/%E9%97%B2%E8%AF%9D-20230429-20230523/" rel="prev"> 闲话 - 20230429~20230523</a></div><div class="post-navigation-item post-navigation-next"><span class="page-navigation-extra-text">下一篇 <i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i></span><a href="/2023/04/22/%E9%97%B2%E8%AF%9D-20230417-20230423/" rel="next"> 闲话 - 20230417~20230423</a></div></div>
 
 
 
