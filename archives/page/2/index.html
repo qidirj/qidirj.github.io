@@ -3,20 +3,16 @@
 <html class="use-big-shadow article-header-style-default">
 <head>
 	
-	<title>OI笔记 - STL - 浅谈 chrono 库在计时上的应用 - Daiari Neko 的博客</title>
+	<title>归档 - Daiari Neko 的博客</title>
 	<meta charset="utf-8">
 	
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 	
-	<meta name="description" content="前置C++ 标准：C++11 头文件：&lt;chrono&gt; 简介namespace std::chrono 中提供了三（两）种可用的时钟：std::chrono::_V2::steady_clock、std::chrono::_V2::system_clock、std::chrono::_V2::high_resolution_clock。 这之中，steady_clock 提供精度较高的">
-<meta property="og:type" content="article">
-<meta property="og:title" content="OI笔记 - STL - 浅谈 chrono 库在计时上的应用">
-<meta property="og:url" content="http://example.com/2023/04/22/OI%E7%AC%94%E8%AE%B0-STL-%E6%B5%85%E8%B0%88-chrono-%E5%BA%93%E5%9C%A8%E8%AE%A1%E6%97%B6%E4%B8%8A%E7%9A%84%E5%BA%94%E7%94%A8/index.html">
+	<meta property="og:type" content="website">
+<meta property="og:title" content="Daiari Neko 的博客">
+<meta property="og:url" content="http://example.com/archives/page/2/index.html">
 <meta property="og:site_name" content="Daiari Neko 的博客">
-<meta property="og:description" content="前置C++ 标准：C++11 头文件：&lt;chrono&gt; 简介namespace std::chrono 中提供了三（两）种可用的时钟：std::chrono::_V2::steady_clock、std::chrono::_V2::system_clock、std::chrono::_V2::high_resolution_clock。 这之中，steady_clock 提供精度较高的">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2023-04-22T02:16:01.000Z">
-<meta property="article:modified_time" content="2023-04-22T10:29:44.027Z">
 <meta property="article:author" content="Daiari Neko">
 <meta name="twitter:card" content="summary">
 
@@ -483,39 +479,18 @@
 		<div id="leftbar_part2" class="widget widget_search card bg-white shadow-sm border-0">
 			<div id="leftbar_part2_inner" class="card-body">
 				
-				<div class="nav-wrapper" style="padding-top: 5px;">
+				<div class="nav-wrapper" style="padding-top: 5px; display:none; ">
 	                <ul class="nav nav-pills nav-fill" role="tablist">
 						
-							<li class="nav-item sidebar-tab-switcher">
-								<a class="active show" id="leftbar_tab_catalog_btn" data-toggle="tab" href="#leftbar_tab_catalog" role="tab" aria-controls="leftbar_tab_catalog" no-pjax>文章目录</a>
-							</li>
-						
 						<li class="nav-item sidebar-tab-switcher">
-							<a class="" id="leftbar_tab_overview_btn" data-toggle="tab" href="#leftbar_tab_overview" role="tab" aria-controls="leftbar_tab_overview" no-pjax>站点概览</a>
+							<a class="active show" id="leftbar_tab_overview_btn" data-toggle="tab" href="#leftbar_tab_overview" role="tab" aria-controls="leftbar_tab_overview" no-pjax>站点概览</a>
 						</li>
 	                </ul>
 				</div>
 				<div>
 					<div class="tab-content" style="padding: 10px 10px 0 10px;">
 						
-							<div class="tab-pane fade active show" id="leftbar_tab_catalog" role="tabpanel" aria-labelledby="leftbar_tab_catalog_btn">
-								<div id="leftbar_catalog"></div>
-								<script type="text/javascript">
-									$(function () {
-										$(document).headIndex({
-											articleWrapSelector: '#post_content',
-											indexBoxSelector: '#leftbar_catalog',
-											subItemBoxClass: "index-subItem-box",
-											itemClass: "index-item",
-											linkClass: "index-link",
-											offset: 80,
-										});
-									})
-								</script>
-								
-							</div>
-						
-						<div class="tab-pane fade text-center" id="leftbar_tab_overview" role="tabpanel" aria-labelledby="leftbar_tab_overview_btn">
+						<div class="tab-pane fade text-center active show" id="leftbar_tab_overview" role="tabpanel" aria-labelledby="leftbar_tab_overview_btn">
 							<img id="leftbar_overview_author_image" src="/assets/img/author.png" class="img-fluid rounded-circle shadow-sm" style="width: 100px;" alt="avatar">
 							<h6 id="leftbar_overview_author_name">Daiari Neko</h6>
 							<nav class="site-state">
@@ -644,214 +619,101 @@
 	<main id="main" class="site-main" role="main">
 		
 		
-			
-	<article class="post post-full card bg-white shadow-sm border-0 ">
+		
+				<article class="post post-full card bg-white shadow-sm border-0">
 	<header class="post-header text-center">
-		
-		<a class="post-title" href="/2023/04/22/OI%E7%AC%94%E8%AE%B0-STL-%E6%B5%85%E8%B0%88-chrono-%E5%BA%93%E5%9C%A8%E8%AE%A1%E6%97%B6%E4%B8%8A%E7%9A%84%E5%BA%94%E7%94%A8/">OI笔记 - STL - 浅谈 chrono 库在计时上的应用</a>
-		<div class="post-meta">
-			
-						
-						<div class="post-meta-detail post-meta-detail-time">
-							<i class="fa fa-clock-o" aria-hidden="true"></i>
-							<time title="发布于 2023-4-22 10:16:01 | 编辑于 2023-4-22 18:29:44">2023-4-22 10:16
-							</time>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-words">
-							<i class="fa fa fa-book" aria-hidden="true"></i>
-							<span id="busuanzi_container_page_pv">
-								阅读<span id="busuanzi_value_page_pv"></span>次
-							</span>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-words">
-							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							969 字
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-readingtime">
-							<i class="fa fa-hourglass-end" aria-hidden="true"></i>
-							5 分钟
-						</div>
-					
-		</div>
-		
+		<a class="post-title" href="/archives/page/2/">归档</a>
 	</header>
 
 	<div class="post-content" id="post_content">
-		<h2 id="前置"><a href="#前置" class="headerlink" title="前置"></a>前置</h2><p>C++ 标准：C++11</p>
-<p>头文件：<code>&lt;chrono&gt;</code></p>
-<h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p><code>namespace std::chrono</code> 中提供了三（两）种可用的时钟：<code>std::chrono::_V2::steady_clock</code>、<code>std::chrono::_V2::system_clock</code>、<code>std::chrono::_V2::high_resolution_clock</code>。</p>
-<p>这之中，<code>steady_clock</code> 提供精度较高的稳定时钟，<code>system_clock</code> 提供精度更高但随系统时间变化的时钟。<code>high_resolution_clock</code> “表示实现提供的拥有最小计次周期的时钟；它可以是 <code>system_clock</code> 或 <code>steady_clock</code> 的别名，或第三个独立时钟。”（<a target="_blank" rel="noopener" href="https://zh.cppreference.com/w/cpp/chrono/high_resolution_clock">来源</a>，有调整）</p>
-<p>具体地，在 Intel(R) Core(TM) i5-9500T CPU @ 2.20GHz 的 CPU 环境下使用 Windows 10 Pro 21H2 操作系统的 g++ 11.2.0 编译出的 <code>steady_clock</code> 具有 <code>100 ns</code> 的精度，<code>system_clock</code> 具有 <code>1 ns</code> 的精度。[1]</p>
-<p>本文主要讨论如何使用 <code>steady_clock</code> 实现计时。</p>
-<p>[1] <code>g++ -v</code> 的输出：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">Using built-in specs.</span><br><span class="line">COLLECT_GCC=E:\qidirj\RedPanda-Cpp\MinGW64\bin\g++.exe</span><br><span class="line">COLLECT_LTO_WRAPPER=E:/qidirj/RedPanda-Cpp/MinGW64/bin/../libexec/gcc/x86_64-w64-mingw32/11.2.0/lto-wrapper.exe</span><br><span class="line">Target: x86_64-w64-mingw32</span><br><span class="line">Configured with: ../../../src/gcc-11.2.0/configure --host=x86_64-w64-mingw32 --build=x86_64-w64-mingw32 --target=x86_64-w64-mingw32 --prefix=/mingw64 --with-sysroot=/d/a/mingw-builds/mingw-builds/buildroot/x86_64-1120-posix-seh-rt_v9-rev1/mingw64 --enable-host-shared --disable-multilib --enable-languages=c,c++,lto --enable-libstdcxx-time=yes --enable-threads=posix --enable-libgomp --enable-libatomic --enable-lto --enable-graphite --enable-checking=release --enable-fully-dynamic-string --enable-version-specific-runtime-libs --enable-libstdcxx-filesystem-ts=yes --disable-libstdcxx-pch --disable-libstdcxx-debug --enable-bootstrap --disable-rpath --disable-win32-registry --disable-nls --disable-werror --disable-symvers --with-gnu-as --with-gnu-ld --with-arch=nocona --with-tune=core2 --with-libiconv --with-system-zlib --with-gmp=/d/a/mingw-builds/mingw-builds/buildroot/prerequisites/x86_64-w64-mingw32-static --with-mpfr=/d/a/mingw-builds/mingw-builds/buildroot/prerequisites/x86_64-w64-mingw32-static --with-mpc=/d/a/mingw-builds/mingw-builds/buildroot/prerequisites/x86_64-w64-mingw32-static --with-isl=/d/a/mingw-builds/mingw-builds/buildroot/prerequisites/x86_64-w64-mingw32-static --with-pkgversion=&#x27;x86_64-posix-seh-rev1, Built by MinGW-W64 project&#x27; --with-bugurl=https://sourceforge.net/projects/mingw-w64 CFLAGS=&#x27;-O2 -pipe -fno-ident -I/d/a/mingw-builds/mingw-builds/buildroot/x86_64-1120-posix-seh-rt_v9-rev1/mingw64/opt/include -I/d/a/mingw-builds/mingw-builds/buildroot/prerequisites/x86_64-zlib-static/include -I/d/a/mingw-builds/mingw-builds/buildroot/prerequisites/x86_64-w64-mingw32-static/include&#x27; CXXFLAGS=&#x27;-O2 -pipe -fno-ident -I/d/a/mingw-builds/mingw-builds/buildroot/x86_64-1120-posix-seh-rt_v9-rev1/mingw64/opt/include -I/d/a/mingw-builds/mingw-builds/buildroot/prerequisites/x86_64-zlib-static/include -I/d/a/mingw-builds/mingw-builds/buildroot/prerequisites/x86_64-w64-mingw32-static/include&#x27; CPPFLAGS=&#x27; -I/d/a/mingw-builds/mingw-builds/buildroot/x86_64-1120-posix-seh-rt_v9-rev1/mingw64/opt/include -I/d/a/mingw-builds/mingw-builds/buildroot/prerequisites/x86_64-zlib-static/include -I/d/a/mingw-builds/mingw-builds/buildroot/prerequisites/x86_64-w64-mingw32-static/include&#x27; LDFLAGS=&#x27;-pipe -fno-ident -L/d/a/mingw-builds/mingw-builds/buildroot/x86_64-1120-posix-seh-rt_v9-rev1/mingw64/opt/lib -L/d/a/mingw-builds/mingw-builds/buildroot/prerequisites/x86_64-zlib-static/lib -L/d/a/mingw-builds/mingw-builds/buildroot/prerequisites/x86_64-w64-mingw32-static/lib &#x27; LD_FOR_TARGET=/d/a/mingw-builds/mingw-builds/buildroot/x86_64-1120-posix-seh-rt_v9-rev1/mingw64/bin/ld.exe --with-boot-ldflags=&#x27; -Wl,--disable-dynamicbase -static-libstdc++ -static-libgcc&#x27;</span><br><span class="line">Thread model: posix</span><br><span class="line">Supported LTO compression algorithms: zlib</span><br><span class="line">gcc version 11.2.0 (x86_64-posix-seh-rev1, Built by MinGW-W64 project)</span><br></pre></td></tr></table></figure>
-
-<h2 id="原型"><a href="#原型" class="headerlink" title="原型"></a>原型</h2><h3 id="std-chrono-steady-clock"><a href="#std-chrono-steady-clock" class="headerlink" title="std::chrono::steady_clock"></a><code>std::chrono::steady_clock</code></h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">struct</span> <span class="title class_">steady_clock</span></span><br><span class="line">&#123;</span><br><span class="line">  <span class="keyword">typedef</span> chrono::nanoseconds				duration;</span><br><span class="line">  <span class="keyword">typedef</span> duration::rep					rep;</span><br><span class="line">  <span class="keyword">typedef</span> duration::period					period;</span><br><span class="line">  <span class="keyword">typedef</span> chrono::time_point&lt;steady_clock, duration&gt;	time_point;</span><br><span class="line"></span><br><span class="line">  <span class="type">static</span> <span class="keyword">constexpr</span> <span class="type">bool</span> is_steady = <span class="literal">true</span>;</span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="type">static</span> time_point</span></span><br><span class="line"><span class="function">  <span class="title">now</span><span class="params">()</span> <span class="keyword">noexcept</span></span>;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-
-<h3 id="std-chrono-time-point-cast"><a href="#std-chrono-time-point-cast" class="headerlink" title="std::chrono::time_point_cast"></a><code>std::chrono::time_point_cast</code></h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">   <span class="keyword">template</span>&lt;<span class="keyword">typename</span> _ToDur, <span class="keyword">typename</span> _Clock, <span class="keyword">typename</span> _Dur&gt;</span><br><span class="line">     <span class="keyword">constexpr</span> <span class="keyword">typename</span> enable_if&lt;__is_duration&lt;_ToDur&gt;::value,</span><br><span class="line">			   time_point&lt;_Clock, _ToDur&gt;&gt;::<span class="function">type</span></span><br><span class="line"><span class="function">     <span class="title">time_point_cast</span><span class="params">(<span class="type">const</span> time_point&lt;_Clock, _Dur&gt;&amp; <span class="type">__t</span>)</span></span></span><br><span class="line"><span class="function">     </span>&#123;</span><br><span class="line"><span class="keyword">typedef</span> time_point&lt;_Clock, _ToDur&gt;			__time_point;</span><br><span class="line"><span class="keyword">return</span> __time_point(<span class="built_in">duration_cast</span>&lt;_ToDur&gt;(<span class="type">__t</span>.<span class="built_in">time_since_epoch</span>()));</span><br><span class="line">     &#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="std-chrono-V2-steady-clock-time-point-time-since-epoch"><a href="#std-chrono-V2-steady-clock-time-point-time-since-epoch" class="headerlink" title="std::chrono::_V2::steady_clock::time_point::time_since_epoch()"></a><code>std::chrono::_V2::steady_clock::time_point::time_since_epoch()</code></h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">constexpr</span> duration</span></span><br><span class="line"><span class="function"><span class="title">time_since_epoch</span><span class="params">()</span> <span class="type">const</span></span></span><br><span class="line"><span class="function"></span>&#123; <span class="keyword">return</span> __d; &#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="用法"><a href="#用法" class="headerlink" title="用法"></a>用法</h2><h3 id="获取当前相对时间"><a href="#获取当前相对时间" class="headerlink" title="获取当前相对时间"></a>获取当前相对时间</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chrono::<span class="built_in">time_point_cast</span>&lt;chrono::nanoseconds&gt;(chrono::steady_clock::<span class="built_in">now</span>()).<span class="built_in">time_since_epoch</span>()</span><br></pre></td></tr></table></figure>
-
-<p><code>chrono::steady_clock::now()</code> 获取相对于一定时间点的当前时间，这个时间点可能是系统启动的时间、UNIX 时间起点等等。</p>
-<p>接着，利用 <code>chrono::time_point_cast&lt;chrono::nanoseconds&gt;()</code> 将这个时间转换为纳秒形式，用 <code>time_since_epoch</code> 获取到相对时间。</p>
-<h3 id="求时间差"><a href="#求时间差" class="headerlink" title="求时间差"></a>求时间差</h3><p>以上的表达式返回 <code>std::chrono::_V2::steady_clock::duration</code> 类型，其有 <code>count()</code> 成员函数，返回时间的整型形式，一般为 <code>long long</code> 类型。这之后，可以利用两个 <code>duration</code> 的 <code>count</code> 之差算出时间差，注意单位为纳秒。</p>
-<h3 id="实现计时"><a href="#实现计时" class="headerlink" title="实现计时"></a>实现计时</h3><p>保存一个 <code>std::chrono::_V2::steady_clock::duration start</code>，在开始时将当前时间传入 <code>start</code>，则在任何时刻可以作差取到时间。</p>
-
+		<div class='argon-timeline'>
+			
+						<div class='argon-timeline-node'>
+							<div class='argon-timeline-time archive-timeline-year'>2023</div>
+							<div class='argon-timeline-card card bg-gradient-secondary archive-timeline-title'></div>
+						</div>
+						
+					<div class='argon-timeline-node'>
+						<div class='argon-timeline-time'>5-30</div>
+						<div class='argon-timeline-card card bg-gradient-secondary archive-timeline-title'>
+							<a href="/2023/05/30/%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0-t0x01-%E8%B4%AA%E5%BF%83/">算法笔记 - t0x01 贪心</a>
+						</div>
+					</div>
+			
+					<div class='argon-timeline-node'>
+						<div class='argon-timeline-time'>5-29</div>
+						<div class='argon-timeline-card card bg-gradient-secondary archive-timeline-title'>
+							<a href="/2023/05/29/%E9%97%B2%E8%AF%9D-20230524-20230608/">闲话 - 20230524~20230608</a>
+						</div>
+					</div>
+			
+					<div class='argon-timeline-node'>
+						<div class='argon-timeline-time'>5-29</div>
+						<div class='argon-timeline-card card bg-gradient-secondary archive-timeline-title'>
+							<a href="/2023/05/29/%E9%97%B2%E8%AF%9D-20230429-20230523/">闲话 - 20230429~20230523</a>
+						</div>
+					</div>
+			
+					<div class='argon-timeline-node'>
+						<div class='argon-timeline-time'>5-1</div>
+						<div class='argon-timeline-card card bg-gradient-secondary archive-timeline-title'>
+							<a href="/2023/05/01/B-%E5%B1%82%E6%A8%A1%E6%8B%9F%E8%B5%9B%E9%A2%98%E8%A7%A3/">B 层模拟赛题解</a>
+						</div>
+					</div>
+			
+					<div class='argon-timeline-node'>
+						<div class='argon-timeline-time'>4-22</div>
+						<div class='argon-timeline-card card bg-gradient-secondary archive-timeline-title'>
+							<a href="/2023/04/22/%E9%97%B2%E8%AF%9D-20230417-20230423/">闲话 - 20230417~20230423</a>
+						</div>
+					</div>
+			
+					<div class='argon-timeline-node'>
+						<div class='argon-timeline-time'>4-22</div>
+						<div class='argon-timeline-card card bg-gradient-secondary archive-timeline-title'>
+							<a href="/2023/04/22/OI%E7%AC%94%E8%AE%B0-STL-%E6%B5%85%E8%B0%88-chrono-%E5%BA%93%E5%9C%A8%E8%AE%A1%E6%97%B6%E4%B8%8A%E7%9A%84%E5%BA%94%E7%94%A8/">OI笔记 - STL - 浅谈 chrono 库在计时上的应用</a>
+						</div>
+					</div>
+			
+					<div class='argon-timeline-node'>
+						<div class='argon-timeline-time'>4-22</div>
+						<div class='argon-timeline-card card bg-gradient-secondary archive-timeline-title'>
+							<a href="/2023/04/22/CCPC2023-%E5%90%89%E6%9E%97%E7%AB%99-%E6%B8%B8%E8%AE%B0/">CCPC2023 吉林站 - 游记</a>
+						</div>
+					</div>
+			
+					<div class='argon-timeline-node'>
+						<div class='argon-timeline-time'>3-25</div>
+						<div class='argon-timeline-card card bg-gradient-secondary archive-timeline-title'>
+							<a href="/2023/03/25/%E6%9C%BA%E6%88%BF%E7%9A%84%E5%90%8C%E5%AD%A6%E4%BB%AC/">机房的同学们</a>
+						</div>
+					</div>
+			
+					<div class='argon-timeline-node'>
+						<div class='argon-timeline-time'>3-25</div>
+						<div class='argon-timeline-card card bg-gradient-secondary archive-timeline-title'>
+							<a href="/2023/03/25/%E7%9C%81%E9%80%89%E6%AD%A6%E6%B1%89%E9%9B%86%E8%AE%AD-%E6%B8%B8%E5%AF%84/">省选武汉集训 - 游寄</a>
+						</div>
+					</div>
+			
+					<div class='argon-timeline-node'>
+						<div class='argon-timeline-time'>3-25</div>
+						<div class='argon-timeline-card card bg-gradient-secondary archive-timeline-title'>
+							<a href="/2023/03/25/%E6%97%A5%E8%AE%B0%E5%8F%AF%E7%88%B1/">日记可爱</a>
+						</div>
+					</div>
+			
+					<div class='argon-timeline-node'>
+						<div class='argon-timeline-time'>3-24</div>
+						<div class='argon-timeline-card card bg-gradient-secondary archive-timeline-title'>
+							<a href="/2023/03/24/hello-world/">Hello World</a>
+						</div>
+					</div>
+			
+		</div>
 	</div>
-
-	
-
-	
-
-	
 </article>
 
-	<div id="share_container">
-	<div id="share" data-initialized="true">
-		<a class="no-pjax icon-wechat" tooltip="分享到微信">
-			<button class="btn btn-icon btn-success">
-				<span class="btn-inner--icon"><i class="fa fa-weixin"></i></span>
-			</button>
-		</a>
-		<a target="_blank" class="no-pjax icon-douban" tooltip="分享到豆瓣">
-			<button class="btn btn-icon btn-primary" style="background: #209261;border: none;">
-				豆
-			</button>
-		</a>
-		<a target="_blank" class="no-pjax icon-qq" tooltip="分享到 QQ">
-			<button class="btn btn-icon btn-primary" style="background: #2196f3;border: none;">
-				<span class="btn-inner--icon"><i class="fa fa-qq"></i></span>
-			</button>
-		</a>
-		<a target="_blank" class="no-pjax icon-qzone" tooltip="分享到 QQ 空间">
-			<button class="btn btn-icon btn-primary" style="background: #ffc107;border: none;">
-				<span class="btn-inner--icon"><i class="fa fa-star"></i></span>
-			</button>
-		</a>
-		<a target="_blank" class="no-pjax icon-weibo" tooltip="分享到微博">
-			<button class="btn btn-icon btn-warning">
-				<span class="btn-inner--icon"><i class="fa fa-weibo"></i></span>
-			</button>
-		</a>
-		<a target="_blank" class="no-pjax icon-facebook" tooltip="分享到 Facebook">
-			<button class="btn btn-icon btn-primary" style="background: #283593;border: none;">
-				<span class="btn-inner--icon"><i class="fa fa-facebook"></i></span>
-			</button>
-		</a>
-		<a target="_blank" class="no-pjax icon-twitter" tooltip="分享到 Twitter">
-			<button class="btn btn-icon btn-primary" style="background: #03a9f4;border: none;">
-				<span class="btn-inner--icon"><i class="fa fa-twitter"></i></span>
-			</button>
-		</a>
-		<a target="_blank" class="no-pjax icon-telegram" href="https://telegram.me/share/url?url=http://example.com/2023/04/22/OI%E7%AC%94%E8%AE%B0-STL-%E6%B5%85%E8%B0%88-chrono-%E5%BA%93%E5%9C%A8%E8%AE%A1%E6%97%B6%E4%B8%8A%E7%9A%84%E5%BA%94%E7%94%A8/&text=OI笔记 - STL - 浅谈 chrono 库在计时上的应用" tooltip="分享到 Telegram">
-			<button class="btn btn-icon btn-primary" style="background: #42a5f5;border: none;">
-				<span class="btn-inner--icon"><i class="fa fa-telegram"></i></span>
-			</button>
-		</a>
-		<a target="_blank" class="no-pjax icon-copy-link" id="share_copy_link" tooltip="复制链接">
-			<button class="btn btn-icon btn-default">
-				<span class="btn-inner--icon"><i class="fa fa-link"></i></span>
-			</button>
-		</a>
-	</div>
-	<button id="share_show" class="btn btn-icon btn-primary" tooltip="分享">
-		<span class="btn-inner--icon"><i class="fa fa-share"></i></span>
-	</button>
-</div>
-<script type="text/javascript">
-	socialShare("#share", {
-	    title : 'OI笔记 - STL - 浅谈 chrono 库在计时上的应用',
-	    description : '前置C++ 标准：C++11
-头文件：&amp;lt;chrono&amp;gt;
-简介namespace std:...',
-	    wechatQrcodeTitle : "分享到微信",
-	    wechatQrcodeHelper : '微信扫描二维码',
-	    source : 'http://example.com/2023/04/22/OI%E7%AC%94%E8%AE%B0-STL-%E6%B5%85%E8%B0%88-chrono-%E5%BA%93%E5%9C%A8%E8%AE%A1%E6%97%B6%E4%B8%8A%E7%9A%84%E5%BA%94%E7%94%A8/'
-	});
-	$("#share_show")[0].onclick = function(){
-		$("#share_container").addClass("opened");
-	};
-	$("#share_copy_link")[0].onclick = function(){
-		let input = document.createElement('input');
-		document.body.appendChild(input);
-		input.setAttribute("value", window.location.href);
-		input.setAttribute("readonly", "readonly");
-		input.setAttribute("style", "opacity: 0;mouse-events:none;");
-		input.select();
-		if (document.execCommand('copy')){
-			iziToast.show({
-				title: '链接已复制',
-				message: "链接已复制到剪贴板",
-				class: 'shadow',
-				position: 'topRight',
-				backgroundColor: '#2dce89',
-				titleColor: '#ffffff',
-				messageColor: '#ffffff',
-				iconColor: '#ffffff',
-				progressBarColor: '#ffffff',
-				icon: 'fa fa-check',
-				timeout: 5000
-			});
-		}else{
-			iziToast.show({
-				title: '复制失败',
-				message: "请手动复制链接",
-				class: 'shadow',
-				position: 'topRight',
-				backgroundColor: '#f5365c',
-				titleColor: '#ffffff',
-				messageColor: '#ffffff',
-				iconColor: '#ffffff',
-				progressBarColor: '#ffffff',
-				icon: 'fa fa-close',
-				timeout: 5000
-			});
-		}
-		document.body.removeChild(input);
-	};
-</script>
-
-
-
-	<div id="post_comment" class="card shadow-sm">
-		<div id="giscus"></div>
-<script src="https://giscus.app/client.js"
-        data-repo="qidirj/blog-talk"
-        data-repo-id="R_kgDOJNwjdQ"
-        data-category="Announcements"
-        data-category-id="DIC_kwDOJNwjdc4CVHUp"
-        data-mapping="pathname"
-        data-input-position="bottom"
-        data-theme="light"
-        data-lang="zh-CN"
-        crossorigin="anonymous"
-        async>
-</script>
-
-	</div>
-
-
-
-<div class="post-navigation card shadow-sm"><div class="post-navigation-item post-navigation-pre"><span class="page-navigation-extra-text"><i class="fa fa-arrow-circle-o-left" aria-hidden="true"></i>上一篇</span><a href="/2023/04/22/%E9%97%B2%E8%AF%9D-20230417-20230423/" rel="prev"> 闲话 - 20230417~20230423</a></div><div class="post-navigation-item post-navigation-next"><span class="page-navigation-extra-text">下一篇 <i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i></span><a href="/2023/04/22/CCPC2023-%E5%90%89%E6%9E%97%E7%AB%99-%E6%B8%B8%E8%AE%B0/" rel="next"> CCPC2023 吉林站 - 游记</a></div></div>
-
-
-
-
-		
 		
 		
 		
