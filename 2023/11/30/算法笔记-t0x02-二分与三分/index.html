@@ -3,20 +3,20 @@
 <html class="use-big-shadow article-header-style-default">
 <head>
 	
-	<title>OI笔记 - STL - 浅谈 chrono 库在计时上的应用 - Daiari Neko 的博客</title>
+	<title>算法笔记 - t0x02 二分与三分 - Daiari Neko 的博客</title>
 	<meta charset="utf-8">
 	
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 	
-	<meta name="description" content="前置C++ 标准：C++11 头文件：&lt;chrono&gt; 简介namespace std::chrono 中提供了三（两）种可用的时钟：std::chrono::_V2::steady_clock、std::chrono::_V2::system_clock、std::chrono::_V2::high_resolution_clock。 这之中，steady_clock 提供精度较高的">
+	<meta name="description" content="早就想写了。咕了半年，难过。 0x0210 二分查找0x0211 引入如同贪心，二分这样的基础算法在生活中也被广泛应用。 众所周知有一个程序员笑话：有人从书店买了一大摞书，经过警报器的时候警报器响了。工作人员要求他依次带着每一本书经过警报器，以此确定是哪本书没有消磁。 结尾不会讲了，总之是这个意思。工作人员这样的操作本质上等价于暴力查找，其复杂度是 $O(n)$ 的。 试想一种更复杂的情况：有 $">
 <meta property="og:type" content="article">
-<meta property="og:title" content="OI笔记 - STL - 浅谈 chrono 库在计时上的应用">
-<meta property="og:url" content="http://example.com/2023/04/22/OI%E7%AC%94%E8%AE%B0-STL-%E6%B5%85%E8%B0%88-chrono-%E5%BA%93%E5%9C%A8%E8%AE%A1%E6%97%B6%E4%B8%8A%E7%9A%84%E5%BA%94%E7%94%A8/index.html">
+<meta property="og:title" content="算法笔记 - t0x02 二分与三分">
+<meta property="og:url" content="http://example.com/2023/11/30/%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0-t0x02-%E4%BA%8C%E5%88%86%E4%B8%8E%E4%B8%89%E5%88%86/index.html">
 <meta property="og:site_name" content="Daiari Neko 的博客">
-<meta property="og:description" content="前置C++ 标准：C++11 头文件：&lt;chrono&gt; 简介namespace std::chrono 中提供了三（两）种可用的时钟：std::chrono::_V2::steady_clock、std::chrono::_V2::system_clock、std::chrono::_V2::high_resolution_clock。 这之中，steady_clock 提供精度较高的">
+<meta property="og:description" content="早就想写了。咕了半年，难过。 0x0210 二分查找0x0211 引入如同贪心，二分这样的基础算法在生活中也被广泛应用。 众所周知有一个程序员笑话：有人从书店买了一大摞书，经过警报器的时候警报器响了。工作人员要求他依次带着每一本书经过警报器，以此确定是哪本书没有消磁。 结尾不会讲了，总之是这个意思。工作人员这样的操作本质上等价于暴力查找，其复杂度是 $O(n)$ 的。 试想一种更复杂的情况：有 $">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2023-04-22T02:16:01.000Z">
-<meta property="article:modified_time" content="2023-04-22T10:29:44.027Z">
+<meta property="article:published_time" content="2023-11-30T02:55:11.000Z">
+<meta property="article:modified_time" content="2023-11-30T02:56:01.432Z">
 <meta property="article:author" content="Daiari Neko">
 <meta name="twitter:card" content="summary">
 
@@ -652,13 +652,13 @@
 	<article class="post post-full card bg-white shadow-sm border-0 ">
 	<header class="post-header text-center">
 		
-		<a class="post-title" href="/2023/04/22/OI%E7%AC%94%E8%AE%B0-STL-%E6%B5%85%E8%B0%88-chrono-%E5%BA%93%E5%9C%A8%E8%AE%A1%E6%97%B6%E4%B8%8A%E7%9A%84%E5%BA%94%E7%94%A8/">OI笔记 - STL - 浅谈 chrono 库在计时上的应用</a>
+		<a class="post-title" href="/2023/11/30/%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0-t0x02-%E4%BA%8C%E5%88%86%E4%B8%8E%E4%B8%89%E5%88%86/">算法笔记 - t0x02 二分与三分</a>
 		<div class="post-meta">
 			
 						
 						<div class="post-meta-detail post-meta-detail-time">
 							<i class="fa fa-clock-o" aria-hidden="true"></i>
-							<time title="发布于 2023-4-22 10:16:01 | 编辑于 2023-4-22 18:29:44">2023-4-22 10:16
+							<time title="发布于 2023-11-30 10:55:11 | 编辑于 2023-11-30 10:56:01">2023-11-30 10:55
 							</time>
 						</div>
 					
@@ -677,7 +677,7 @@
 						
 						<div class="post-meta-detail post-meta-detail-words">
 							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							969 字
+							3k 字
 						</div>
 					
 						
@@ -685,7 +685,7 @@
 						
 						<div class="post-meta-detail post-meta-detail-readingtime">
 							<i class="fa fa-hourglass-end" aria-hidden="true"></i>
-							5 分钟
+							12 分钟
 						</div>
 					
 		</div>
@@ -693,27 +693,75 @@
 	</header>
 
 	<div class="post-content" id="post_content">
-		<h2 id="前置"><a href="#前置" class="headerlink" title="前置"></a>前置</h2><p>C++ 标准：C++11</p>
-<p>头文件：<code>&lt;chrono&gt;</code></p>
-<h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p><code>namespace std::chrono</code> 中提供了三（两）种可用的时钟：<code>std::chrono::_V2::steady_clock</code>、<code>std::chrono::_V2::system_clock</code>、<code>std::chrono::_V2::high_resolution_clock</code>。</p>
-<p>这之中，<code>steady_clock</code> 提供精度较高的稳定时钟，<code>system_clock</code> 提供精度更高但随系统时间变化的时钟。<code>high_resolution_clock</code> “表示实现提供的拥有最小计次周期的时钟；它可以是 <code>system_clock</code> 或 <code>steady_clock</code> 的别名，或第三个独立时钟。”（<a target="_blank" rel="noopener" href="https://zh.cppreference.com/w/cpp/chrono/high_resolution_clock">来源</a>，有调整）</p>
-<p>具体地，在 Intel(R) Core(TM) i5-9500T CPU @ 2.20GHz 的 CPU 环境下使用 Windows 10 Pro 21H2 操作系统的 g++ 11.2.0 编译出的 <code>steady_clock</code> 具有 <code>100 ns</code> 的精度，<code>system_clock</code> 具有 <code>1 ns</code> 的精度。[1]</p>
-<p>本文主要讨论如何使用 <code>steady_clock</code> 实现计时。</p>
-<p>[1] <code>g++ -v</code> 的输出：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">Using built-in specs.</span><br><span class="line">COLLECT_GCC=E:\qidirj\RedPanda-Cpp\MinGW64\bin\g++.exe</span><br><span class="line">COLLECT_LTO_WRAPPER=E:/qidirj/RedPanda-Cpp/MinGW64/bin/../libexec/gcc/x86_64-w64-mingw32/11.2.0/lto-wrapper.exe</span><br><span class="line">Target: x86_64-w64-mingw32</span><br><span class="line">Configured with: ../../../src/gcc-11.2.0/configure --host=x86_64-w64-mingw32 --build=x86_64-w64-mingw32 --target=x86_64-w64-mingw32 --prefix=/mingw64 --with-sysroot=/d/a/mingw-builds/mingw-builds/buildroot/x86_64-1120-posix-seh-rt_v9-rev1/mingw64 --enable-host-shared --disable-multilib --enable-languages=c,c++,lto --enable-libstdcxx-time=yes --enable-threads=posix --enable-libgomp --enable-libatomic --enable-lto --enable-graphite --enable-checking=release --enable-fully-dynamic-string --enable-version-specific-runtime-libs --enable-libstdcxx-filesystem-ts=yes --disable-libstdcxx-pch --disable-libstdcxx-debug --enable-bootstrap --disable-rpath --disable-win32-registry --disable-nls --disable-werror --disable-symvers --with-gnu-as --with-gnu-ld --with-arch=nocona --with-tune=core2 --with-libiconv --with-system-zlib --with-gmp=/d/a/mingw-builds/mingw-builds/buildroot/prerequisites/x86_64-w64-mingw32-static --with-mpfr=/d/a/mingw-builds/mingw-builds/buildroot/prerequisites/x86_64-w64-mingw32-static --with-mpc=/d/a/mingw-builds/mingw-builds/buildroot/prerequisites/x86_64-w64-mingw32-static --with-isl=/d/a/mingw-builds/mingw-builds/buildroot/prerequisites/x86_64-w64-mingw32-static --with-pkgversion=&#x27;x86_64-posix-seh-rev1, Built by MinGW-W64 project&#x27; --with-bugurl=https://sourceforge.net/projects/mingw-w64 CFLAGS=&#x27;-O2 -pipe -fno-ident -I/d/a/mingw-builds/mingw-builds/buildroot/x86_64-1120-posix-seh-rt_v9-rev1/mingw64/opt/include -I/d/a/mingw-builds/mingw-builds/buildroot/prerequisites/x86_64-zlib-static/include -I/d/a/mingw-builds/mingw-builds/buildroot/prerequisites/x86_64-w64-mingw32-static/include&#x27; CXXFLAGS=&#x27;-O2 -pipe -fno-ident -I/d/a/mingw-builds/mingw-builds/buildroot/x86_64-1120-posix-seh-rt_v9-rev1/mingw64/opt/include -I/d/a/mingw-builds/mingw-builds/buildroot/prerequisites/x86_64-zlib-static/include -I/d/a/mingw-builds/mingw-builds/buildroot/prerequisites/x86_64-w64-mingw32-static/include&#x27; CPPFLAGS=&#x27; -I/d/a/mingw-builds/mingw-builds/buildroot/x86_64-1120-posix-seh-rt_v9-rev1/mingw64/opt/include -I/d/a/mingw-builds/mingw-builds/buildroot/prerequisites/x86_64-zlib-static/include -I/d/a/mingw-builds/mingw-builds/buildroot/prerequisites/x86_64-w64-mingw32-static/include&#x27; LDFLAGS=&#x27;-pipe -fno-ident -L/d/a/mingw-builds/mingw-builds/buildroot/x86_64-1120-posix-seh-rt_v9-rev1/mingw64/opt/lib -L/d/a/mingw-builds/mingw-builds/buildroot/prerequisites/x86_64-zlib-static/lib -L/d/a/mingw-builds/mingw-builds/buildroot/prerequisites/x86_64-w64-mingw32-static/lib &#x27; LD_FOR_TARGET=/d/a/mingw-builds/mingw-builds/buildroot/x86_64-1120-posix-seh-rt_v9-rev1/mingw64/bin/ld.exe --with-boot-ldflags=&#x27; -Wl,--disable-dynamicbase -static-libstdc++ -static-libgcc&#x27;</span><br><span class="line">Thread model: posix</span><br><span class="line">Supported LTO compression algorithms: zlib</span><br><span class="line">gcc version 11.2.0 (x86_64-posix-seh-rev1, Built by MinGW-W64 project)</span><br></pre></td></tr></table></figure>
+		<p>早就想写了。咕了半年，难过。</p>
+<h2 id="0x0210-二分查找"><a href="#0x0210-二分查找" class="headerlink" title="0x0210 二分查找"></a>0x0210 二分查找</h2><h3 id="0x0211-引入"><a href="#0x0211-引入" class="headerlink" title="0x0211 引入"></a>0x0211 引入</h3><p>如同贪心，二分这样的基础算法在生活中也被广泛应用。</p>
+<p>众所周知有一个程序员笑话：有人从书店买了一大摞书，经过警报器的时候警报器响了。工作人员要求他依次带着每一本书经过警报器，以此确定是哪本书没有消磁。</p>
+<p>结尾不会讲了，总之是这个意思。工作人员这样的操作本质上等价于暴力查找，其复杂度是 $O(n)$ 的。</p>
+<p>试想一种更复杂的情况：有 $n$ 本书按书名字典序排序，$q$ 个人依次来买书，那么你还要暴力查找吗？这是 $O(nq)$ 的，兴许客人到最后都等急了。</p>
+<p>因此，我们引入了二分查找。事实上，一般这时我们也不会去真的一本一本找。假设客人要买的是《一本通提高篇》，我们可能会随机在这一堆书里抽一个靠中间的，《论玩原神的重要性》。它的首字母是 L，我们要找的是 Y。因此要在这本书之后再去找《一本通提高篇》。这样一直找下去，最终就能更快速地找到想要的书了。</p>
+<p>小声：为什么不用 Trie 树。</p>
+<h3 id="0x0212-形式化"><a href="#0x0212-形式化" class="headerlink" title="0x0212 形式化"></a>0x0212 形式化</h3><p>给定含 $n$ 个元素、严格单调递增的整数数组 $a_i$，$q$ 次询问，每次询问给定 $x$，输出满足 $a_i&#x3D;x$ 的 $i$（由于数组严格单调递增，这样的 $i$ 最多只有一个），若不存在这样的 $i$ 则输出 $-1$。</p>
+<p>先考虑一次询问。当任意选取一个 $i$ 时，可能发生的有：</p>
+<ul>
+<li>$a_i &lt; x$。既然对于 $i$ 它成立，那么对于一个 $j&lt;i$，一定有 $a_j &lt; a_i &lt; x$，继而所有 $j \leq i$ 都不可能成为答案。</li>
+<li>$a_i &gt; x$。类似地，所有 $j \geq i$ 都不可能成为答案。</li>
+<li>$a_i &#x3D; x$。$a_i$ 即为答案。</li>
+</ul>
+<p>但是 $i$ 要怎样选取呢？设当前可能为答案的区间为 $[l, r]$，第一种情况下，我们可以排除 $i-l+1$ 个元素；第二种情况下，我们可以排除 $r-i+1$ 个元素。为了让我们的算法在任何情况下优秀，要让最坏情况下排除的元素最多。也就是最大化 $\min(i-l+1, r-i+1)$，应取 $i &#x3D; \frac{l+r}{2}$。$l+r$ 为奇数的情况下，我们不能取小数下标，向下和向上取整都能使其最大化。由于 <code>C++</code> 的正整数除法默认向下取整，取下整相对容易实现。伪代码如下：</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">solve</span><span class="params">(<span class="type">int</span> n, <span class="type">int</span> a[])</span> </span>&#123;</span><br><span class="line">  <span class="type">int</span> l = <span class="number">0</span>, r = n - <span class="number">1</span>;</span><br><span class="line">  <span class="keyword">while</span> (l &lt;= r) &#123;</span><br><span class="line">    <span class="type">int</span> mid = (l + r) / <span class="number">2</span>;</span><br><span class="line">    <span class="keyword">if</span> (a[mid] &lt; x) l = mid + <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span> (a[mid] &gt; x) r = mid - <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">return</span> mid;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<h2 id="原型"><a href="#原型" class="headerlink" title="原型"></a>原型</h2><h3 id="std-chrono-steady-clock"><a href="#std-chrono-steady-clock" class="headerlink" title="std::chrono::steady_clock"></a><code>std::chrono::steady_clock</code></h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">struct</span> <span class="title class_">steady_clock</span></span><br><span class="line">&#123;</span><br><span class="line">  <span class="keyword">typedef</span> chrono::nanoseconds				duration;</span><br><span class="line">  <span class="keyword">typedef</span> duration::rep					rep;</span><br><span class="line">  <span class="keyword">typedef</span> duration::period					period;</span><br><span class="line">  <span class="keyword">typedef</span> chrono::time_point&lt;steady_clock, duration&gt;	time_point;</span><br><span class="line"></span><br><span class="line">  <span class="type">static</span> <span class="keyword">constexpr</span> <span class="type">bool</span> is_steady = <span class="literal">true</span>;</span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="type">static</span> time_point</span></span><br><span class="line"><span class="function">  <span class="title">now</span><span class="params">()</span> <span class="keyword">noexcept</span></span>;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h3 id="0x0213-加强版"><a href="#0x0213-加强版" class="headerlink" title="0x0213 加强版"></a>0x0213 加强版</h3><p>如果数组不再严格单调递增呢？现在，给定的整数数组只保证单调递增，可以有重复的元素。要求的为最小的 $i$ 满足 $a_i&#x3D;x$。</p>
+<p>还是考虑单次询问。但是这次有一些不同。当任意选取一个 $i$ 时，可能发生的有：</p>
+<ul>
+<li>$a_i &lt; x$。既然对于 $i$ 它成立，那么对于一个 $j&lt;i$，一定有 $a_j &lt; a_i &lt; x$，继而所有 $j \leq i$ 都不可能成为答案。</li>
+<li>$a_i \geq x$。我们合并了两种情况。此时，即使 $a_i &#x3D; x$，$i$ 也可能不是答案（因为可能有更小的 $i$ 也满足）。$i$ 仍有是答案的可能性，但所有 $j &gt; i$ 都不可能成为答案。</li>
+</ul>
+<p>同上，设当前可能为答案的区间为 $[l, r]$，第一种情况下，我们可以排除 $i-l+1$ 个元素；第二种情况下，我们可以排除 $r-i$ 个元素（注意这里少了 $1$）。最大化 $\min(i-l+1, r-i)$，应取 $i&#x3D;\frac{l+r-1}{2}$。在 $(l+r)$ 为奇数时，此值等于 $\lfloor\frac{l+r}{2}\rfloor$；为偶数时，此值为小数，同上地，向上、向下取整都可以最大化。若取上整，则相当于取 $\frac{l+r}{2}$。综上，若取上整，可以将两种情况同时考虑，并不失最优性。</p>
+<p>伪代码如下：</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">solve</span><span class="params">(<span class="type">int</span> n, <span class="type">int</span> a[])</span> </span>&#123;</span><br><span class="line">  <span class="type">int</span> l = <span class="number">0</span>, r = n - <span class="number">1</span>;</span><br><span class="line">  <span class="keyword">while</span> (l &lt; r) &#123;</span><br><span class="line">    <span class="type">int</span> mid = (l + r) / <span class="number">2</span>;</span><br><span class="line">    <span class="keyword">if</span> (a[mid] &lt; x) l = mid + <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">else</span> r = mid;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">if</span> (a[l] == x) <span class="keyword">return</span> l;</span><br><span class="line">  <span class="keyword">else</span> <span class="keyword">return</span> <span class="number">-1</span>; <span class="comment">// 可能不存在</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<h3 id="std-chrono-time-point-cast"><a href="#std-chrono-time-point-cast" class="headerlink" title="std::chrono::time_point_cast"></a><code>std::chrono::time_point_cast</code></h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">   <span class="keyword">template</span>&lt;<span class="keyword">typename</span> _ToDur, <span class="keyword">typename</span> _Clock, <span class="keyword">typename</span> _Dur&gt;</span><br><span class="line">     <span class="keyword">constexpr</span> <span class="keyword">typename</span> enable_if&lt;__is_duration&lt;_ToDur&gt;::value,</span><br><span class="line">			   time_point&lt;_Clock, _ToDur&gt;&gt;::<span class="function">type</span></span><br><span class="line"><span class="function">     <span class="title">time_point_cast</span><span class="params">(<span class="type">const</span> time_point&lt;_Clock, _Dur&gt;&amp; <span class="type">__t</span>)</span></span></span><br><span class="line"><span class="function">     </span>&#123;</span><br><span class="line"><span class="keyword">typedef</span> time_point&lt;_Clock, _ToDur&gt;			__time_point;</span><br><span class="line"><span class="keyword">return</span> __time_point(<span class="built_in">duration_cast</span>&lt;_ToDur&gt;(<span class="type">__t</span>.<span class="built_in">time_since_epoch</span>()));</span><br><span class="line">     &#125;</span><br></pre></td></tr></table></figure>
+<h3 id="0x0214-另一种写法"><a href="#0x0214-另一种写法" class="headerlink" title="0x0214 另一种写法"></a>0x0214 另一种写法</h3><p>以下是一种（作者认为的）更好理解的做法。</p>
+<p>我们可以定义一个位置为合法解，当且仅当 $a_i \geq x$。我们要选择的，是 $i$ 最小的合法解 $ans$——如果 $a_{ans}&#x3D;x$，它就是我们需要的答案；否则无解。这很好证明，利用单调性即可。</p>
+<p>因此，我们要额外维护一个 $ans &#x3D; \min i$，为当前见到的最小的“合法解”。</p>
+<p>单次询问，选取一个 $i$ 时，可能有：</p>
+<ul>
+<li>$a_i &lt; x$。既然对于 $i$ 它成立，那么对于一个 $j&lt;i$，一定有 $a_j &lt; a_i &lt; x$，继而所有 $j \leq i$ 都不可能成为答案。</li>
+<li>$a_i \geq x$。所有 $j \geq i$ 都是合法解，这一部分中最小的合法解是 $i$；<strong>而对一个 $j &lt; i$，$j$ 可能是更小的合法解</strong>。因此，我们要再去尝试 $j&lt;i$ 的部分。</li>
+</ul>
+<p>利用与 0x0212 相同的方式，我们可以推出此处选择 $i &#x3D; \lfloor\frac{l+r}{2}\rfloor$ 最优。伪代码如下：</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">solve</span><span class="params">(<span class="type">int</span> n, <span class="type">int</span> a[])</span> </span>&#123;</span><br><span class="line">  <span class="type">int</span> l = <span class="number">0</span>, r = n - <span class="number">1</span>, ans = <span class="number">-1</span>;</span><br><span class="line">  <span class="keyword">while</span> (l &lt;= r) &#123;</span><br><span class="line">    <span class="type">int</span> mid = (l + r) / <span class="number">2</span>;</span><br><span class="line">    <span class="keyword">if</span> (a[mid] &lt; x) l = mid + <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">else</span> r = mid - <span class="number">1</span>, ans = mid;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">if</span> (a[ans] == x) <span class="keyword">return</span> ans;</span><br><span class="line">  <span class="keyword">else</span> <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<h3 id="std-chrono-V2-steady-clock-time-point-time-since-epoch"><a href="#std-chrono-V2-steady-clock-time-point-time-since-epoch" class="headerlink" title="std::chrono::_V2::steady_clock::time_point::time_since_epoch()"></a><code>std::chrono::_V2::steady_clock::time_point::time_since_epoch()</code></h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">constexpr</span> duration</span></span><br><span class="line"><span class="function"><span class="title">time_since_epoch</span><span class="params">()</span> <span class="type">const</span></span></span><br><span class="line"><span class="function"></span>&#123; <span class="keyword">return</span> __d; &#125;</span><br></pre></td></tr></table></figure>
+<h2 id="0x021f-补充信息"><a href="#0x021f-补充信息" class="headerlink" title="0x021f 补充信息"></a>0x021f 补充信息</h2><p>条件：显然需要单调性。</p>
+<p>一般写法：一般来说采用 0x0213 或是 0x0214 中的写法——0x0212 写法的普适性太差了。</p>
+<p>时间复杂度：由于每次我们选取的 $i$ 使得区间减半，其复杂度为 $T(n) &#x3D; T(\frac{n}{2})+1$，推得 $T(n) &#x3D; O(\log n)$。</p>
+<p>一般用途：带修改的多次询问时常使用——不带修改可用 <code>std::sort</code> 替代，单次询问可用暴力替代。</p>
+<p>STL：<code>std::lower_bound</code>，其求出的是第一个满足 $a_i \geq x$ 的位置（的指针）。另外还有 <code>std::upper_bound</code>，其求出的是第一个满足 $a_i &gt; x$ 的位置（的指针）（注意这里是 $&gt;$）。事实上，这两个问题相当于什么呢？相当于，若你要将 $x$ 插入数组中，保持数组的单调性，能够插入的第一个位置和最后一个位置。</p>
+<h2 id="0x0220-二分答案"><a href="#0x0220-二分答案" class="headerlink" title="0x0220 二分答案"></a>0x0220 二分答案</h2><h3 id="0x0221-概念"><a href="#0x0221-概念" class="headerlink" title="0x0221 概念"></a>0x0221 概念</h3><p>有些题目中，可能需要求：满足条件 $p(x)$ 的<strong>最小（大）的</strong> $x$。朴素的想法是枚举值域内的每一个 $x$，但值域较大时会 TLE。如果满足条件的 $x$ 满足一定条件呢？</p>
+<p>有的时候，对于任意一对值域内的数 $x&lt;y$，就会有 $y$ 的限制比 $x$ 更松（也可能反之）。这是什么意思呢？以一道题举例：条件 $p(x)$ 为存在至少 $m$ 个数满足 $a_i \leq x$。那么，对于一个 $x&lt;y$，若 $x$ 满足条件，$y$ 一定满足。</p>
+<p>这种情况下，若我们将满足条件写作 $1$，不满足写作 $0$，并将值域内从小到大的每一个 $x$ 对应的 $p(x)$ 写出来，则必然形如 $0\dots 01\dots 1$（或 $1\dots 10\dots 0$）。这是满足非严格单调性的，可以使用二分法找到满足条件的最小（大）的 $x$。</p>
+<p>当我们证明（或者猜测）条件具有单调性时，就可以使用二分法求 $x$ 了。</p>
+<p>设给定一个 $x$，判定 $p(x)$ 是否为真的时间复杂度是 $O(f)$；$x$ 的值域是 $S$；则二分答案的时间复杂度是 $O(f \log |S|)$。</p>
+<h3 id="0x0222-浮点数做法"><a href="#0x0222-浮点数做法" class="headerlink" title="0x0222 浮点数做法"></a>0x0222 浮点数做法</h3><p>如果要求出一个精度达到一定要求的实数解呢？此时，如果条件仍然具有单调性，我们可以进行二分。但是，整数二分依赖排除 $[i, r]$ 之后剩下的区间是 $[l, i-1]$（反之亦然）这一特性。浮点数下，剩下的区间是 $[l, i)$，且无法使得区间内仅剩一个可能的值。</p>
+<p>由于我们只需要一定的精度，只要区间 $[l, r]$ 的长度 $r-l$ 远小于这个精度，就能够得到满足精度的答案了。这样，我们得以完成二分的操作。</p>
+<p>伪代码如下：</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">bool</span> <span class="title">check</span><span class="params">(<span class="type">double</span> mid)</span> </span>&#123;</span><br><span class="line">  <span class="comment">// 判定 p(mid)</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">solve</span><span class="params">()</span> </span>&#123;</span><br><span class="line">  <span class="type">static</span> <span class="type">const</span> <span class="type">double</span> eps = <span class="number">1e-6</span>; <span class="comment">// 一个小于精度要求的值，一般要比精度高一个数量级</span></span><br><span class="line">  <span class="type">double</span> l = <span class="number">0</span>, r = <span class="number">1e9</span>;</span><br><span class="line">  <span class="keyword">while</span> (r - l &gt; eps) &#123;</span><br><span class="line">    <span class="type">int</span> mid = (l + r) / <span class="number">2</span>;</span><br><span class="line">    <span class="keyword">if</span> (<span class="built_in">check</span>(mid)) r = mid; <span class="comment">// 应为 mid - eps</span></span><br><span class="line">    <span class="keyword">else</span> l = mid; <span class="comment">// 应为 mid + eps</span></span><br><span class="line">    <span class="comment">// 由于 eps 可忽略，这里直接取作 mid，不影响复杂度。</span></span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> l;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<h2 id="用法"><a href="#用法" class="headerlink" title="用法"></a>用法</h2><h3 id="获取当前相对时间"><a href="#获取当前相对时间" class="headerlink" title="获取当前相对时间"></a>获取当前相对时间</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chrono::<span class="built_in">time_point_cast</span>&lt;chrono::nanoseconds&gt;(chrono::steady_clock::<span class="built_in">now</span>()).<span class="built_in">time_since_epoch</span>()</span><br></pre></td></tr></table></figure>
-
-<p><code>chrono::steady_clock::now()</code> 获取相对于一定时间点的当前时间，这个时间点可能是系统启动的时间、UNIX 时间起点等等。</p>
-<p>接着，利用 <code>chrono::time_point_cast&lt;chrono::nanoseconds&gt;()</code> 将这个时间转换为纳秒形式，用 <code>time_since_epoch</code> 获取到相对时间。</p>
-<h3 id="求时间差"><a href="#求时间差" class="headerlink" title="求时间差"></a>求时间差</h3><p>以上的表达式返回 <code>std::chrono::_V2::steady_clock::duration</code> 类型，其有 <code>count()</code> 成员函数，返回时间的整型形式，一般为 <code>long long</code> 类型。这之后，可以利用两个 <code>duration</code> 的 <code>count</code> 之差算出时间差，注意单位为纳秒。</p>
-<h3 id="实现计时"><a href="#实现计时" class="headerlink" title="实现计时"></a>实现计时</h3><p>保存一个 <code>std::chrono::_V2::steady_clock::duration start</code>，在开始时将当前时间传入 <code>start</code>，则在任何时刻可以作差取到时间。</p>
+<h2 id="0x0230-三分法"><a href="#0x0230-三分法" class="headerlink" title="0x0230 三分法"></a>0x0230 三分法</h2><p>如果需要求单峰函数的极值点，通常可使用二分法衍生出的三分法求解。</p>
+<p>假设 $f(x)$ 为存在且仅存在一个极大值的单峰函数，当前已经确定了其极值点的 $x$ 坐标范围是 $[l, r]$。取两个值 $i, j$ 满足 $l &lt; i &lt; j &lt; r$，可能发生的有：</p>
+<ul>
+<li>$f(i) &lt; f(j)$。若极值点在 $[l, i]$，则函数在 $[i, r]$ 上应为单调递减，与事实不符，因此极值点不在 $[l, i]$ 上。若极值点在 $[i, j]$，显然成立。若极值点在 $[j, r]$，函数在 $[l, j]$ 上应为单调递增，可能成立。综上，可以将区间缩小为 $[i, r]$。</li>
+<li>$f(i) &gt; f(j)$。类似地，可以将区间缩小为 $[l, j]$。</li>
+<li>$f(i) &#x3D; f(j)$。事实上，若函数（在极值点左&#x2F;右）非严格单调递增&#x2F;减，这种情况下我们无法排除任何一段区间。但若函数严格单调递增&#x2F;减，则可以将区间缩小为 $[i, j]$。为了编码方便，可以将此情况归入上述两种中的任意一种，不影响复杂度。</li>
+</ul>
+<p>根据推论，取 $i, j$ 时，需要最大化 $\min(i - l, r - j)$。取 $i &#x3D; j &#x3D; \frac{l+r}{2}$ 最优，但此时显然做不到排除。因此对其增加扰动，即取 $i &#x3D; \frac{l+r}{2} - \varepsilon, j &#x3D; \frac{l+r}{2} + \varepsilon ~\mathrm{(a)}$，其中 $\varepsilon$ 为一个极小正数（可取 $10^{-6}$ 等）。常见的其它取法还有 $i &#x3D; \frac{2l+r}{3}, j &#x3D; \frac{l+2r}{3} ~\mathrm{(b)}$、$i &#x3D; \frac{l+r}{2}, j &#x3D; \frac{i+r}{2} &#x3D; \frac{l+3r}{4} ~\mathrm{(c)}$ 等等。</p>
+<p>时间复杂度：设求一次 $f(x)$ 的时间复杂度为 $O(p)$，值域为 $S$；则三分法的时间复杂度是 $O(p n \log_2 |S|)$。</p>
+<h2 id="0x0240-例题"><a href="#0x0240-例题" class="headerlink" title="0x0240 例题"></a>0x0240 例题</h2><h3 id="0x0243-喷水装置"><a href="#0x0243-喷水装置" class="headerlink" title="0x0243 喷水装置"></a>0x0243 喷水装置</h3><p>三分模板，但为了严谨性需要证明若干个单谷二次函数取 $\max$ 后仍为单谷函数。</p>
+<p>证明链接：<a target="_blank" rel="noopener" href="https://blog.csdn.net/mobius_strip/article/details/45618095?utm_source=copy">https://blog.csdn.net/mobius_strip/article/details/45618095?utm_source=copy</a></p>
+<h3 id="0x0245-扩散"><a href="#0x0245-扩散" class="headerlink" title="0x0245 扩散"></a>0x0245 扩散</h3><p>考虑确定时间时判定 $p(x)$。若两个点能够通过<strong>直接</strong>扩散连接，它们的曼哈顿距离需要 $\leq 2x$。这之后，我们枚举每一个点对，若它们能够直接连接，则在并查集中将两个点合并。最后，如果所有点在并查集中均被合并，则此 $x$ 合法。</p>
+<h3 id="0x0246-灯泡"><a href="#0x0246-灯泡" class="headerlink" title="0x0246 灯泡"></a>0x0246 灯泡</h3><p>纯纯垃圾推式子题。作平行线后，可以通过相似求解投影高度。</p>
+<h3 id="0x0247-传送带"><a href="#0x0247-传送带" class="headerlink" title="0x0247 传送带"></a>0x0247 传送带</h3><p>三分套三分模板题。考虑确定了在第一条传送带上走了多远后，在第二条传送带上走的路程-总的用时形成一个单谷函数，可以三分。再考虑，在第二条传送带永远走最优解时，第一条传送带上走的路程-总的用时也形成一个单谷函数，也可以三分。</p>
+<p>这题给了我们一个启发：三分的目标函数可以是通过其他算法动态求出的，而并非是一个给定的函数。</p>
+<p>时间复杂度是 $O(\log^2 n)$，$n$ 为值域大小。</p>
 
 	</div>
 
@@ -761,7 +809,7 @@
 				<span class="btn-inner--icon"><i class="fa fa-twitter"></i></span>
 			</button>
 		</a>
-		<a target="_blank" class="no-pjax icon-telegram" href="https://telegram.me/share/url?url=http://example.com/2023/04/22/OI%E7%AC%94%E8%AE%B0-STL-%E6%B5%85%E8%B0%88-chrono-%E5%BA%93%E5%9C%A8%E8%AE%A1%E6%97%B6%E4%B8%8A%E7%9A%84%E5%BA%94%E7%94%A8/&text=OI笔记 - STL - 浅谈 chrono 库在计时上的应用" tooltip="分享到 Telegram">
+		<a target="_blank" class="no-pjax icon-telegram" href="https://telegram.me/share/url?url=http://example.com/2023/11/30/%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0-t0x02-%E4%BA%8C%E5%88%86%E4%B8%8E%E4%B8%89%E5%88%86/&text=算法笔记 - t0x02 二分与三分" tooltip="分享到 Telegram">
 			<button class="btn btn-icon btn-primary" style="background: #42a5f5;border: none;">
 				<span class="btn-inner--icon"><i class="fa fa-telegram"></i></span>
 			</button>
@@ -778,13 +826,12 @@
 </div>
 <script type="text/javascript">
 	socialShare("#share", {
-	    title : 'OI笔记 - STL - 浅谈 chrono 库在计时上的应用',
-	    description : '前置C++ 标准：C++11
-头文件：&amp;lt;chrono&amp;gt;
-简介namespace std:...',
+	    title : '算法笔记 - t0x02 二分与三分',
+	    description : '早就想写了。咕了半年，难过。
+0x0210 二分查找0x0211 引入如同贪心，二分这样的基础算法在...',
 	    wechatQrcodeTitle : "分享到微信",
 	    wechatQrcodeHelper : '微信扫描二维码',
-	    source : 'http://example.com/2023/04/22/OI%E7%AC%94%E8%AE%B0-STL-%E6%B5%85%E8%B0%88-chrono-%E5%BA%93%E5%9C%A8%E8%AE%A1%E6%97%B6%E4%B8%8A%E7%9A%84%E5%BA%94%E7%94%A8/'
+	    source : 'http://example.com/2023/11/30/%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0-t0x02-%E4%BA%8C%E5%88%86%E4%B8%8E%E4%B8%89%E5%88%86/'
 	});
 	$("#share_show")[0].onclick = function(){
 		$("#share_container").addClass("opened");
@@ -850,7 +897,7 @@
 
 
 
-<div class="post-navigation card shadow-sm"><div class="post-navigation-item post-navigation-pre"><span class="page-navigation-extra-text"><i class="fa fa-arrow-circle-o-left" aria-hidden="true"></i>上一篇</span><a href="/2023/04/22/%E9%97%B2%E8%AF%9D-20230417-20230423/" rel="prev"> 闲话 - 20230417~20230423</a></div><div class="post-navigation-item post-navigation-next"><span class="page-navigation-extra-text">下一篇 <i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i></span><a href="/2023/04/22/CCPC2023-%E5%90%89%E6%9E%97%E7%AB%99-%E6%B8%B8%E8%AE%B0/" rel="next"> CCPC2023 吉林站 - 游记</a></div></div>
+<div class="post-navigation card shadow-sm"><div class="post-navigation-item post-navigation-pre"><span class="page-navigation-extra-text"><i class="fa fa-arrow-circle-o-left" aria-hidden="true"></i>上一篇</span><a href="/2023/11/30/%E9%A2%98%E8%A7%A3-P5285-%E5%8D%81%E4%BA%8C%E7%9C%81%E8%81%94%E8%80%83-2019-%E9%AA%97%E5%88%86%E8%BF%87%E6%A0%B7%E4%BE%8B/" rel="prev"> 题解 - P5285 [十二省联考 2019] 骗分过样例</a></div><div class="post-navigation-item post-navigation-next"><span class="page-navigation-extra-text">下一篇 <i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i></span><a href="/2023/07/08/%E9%97%B2%E8%AF%9D-20230707-20230708/" rel="next"> 闲话 - 20230707~20230708</a></div></div>
 
 
 
